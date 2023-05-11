@@ -1,0 +1,66 @@
+#ECAN封装报文配置文件
+
+0X111:
+ ACC_AccTrqReqEna: #车辆扭矩控制使能
+  StartBit: 45
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACC_AccTrqReq: #扭矩值 0-100
+  StartBit: 46
+  Length: 10
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.097847
+  Offset: 0
+ ACC_CDDAxEnable: #制动使能
+  StartBit: 31
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACC_ACCTargetAcceleration: #加速度，为负值用于减速
+  StartBit: 0
+  Length: 8
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.05
+  Offset: -5
+ ACC_DecToStop: #ACC请AACC请求减速到停止 0x0: no demand; 这是什么玩意儿？
+  StartBit: 28
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ APA_SteeringAngleRequest: #方向角度值
+  StartBit: 56
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.1
+  Offset: 0
+ ACC_AEBDecCtrlAvail: #AEB： 减速请求 0x0: no demand;0x1:demand
+  StartBit: 30
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACC_AEBTargetDeceleration: #AEB目标减速度 [-16,16]
+  StartBit: 16
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.0005
+  Offset: -16
+ ACU_ChassisGearCtrl: #档位控制
+  StartBit: 4
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0

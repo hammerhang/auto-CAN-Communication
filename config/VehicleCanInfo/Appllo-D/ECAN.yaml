@@ -1,0 +1,114 @@
+#ECAN封装报文配置文件
+
+0X130:
+ ACU_ChassisDriverEnCtrl: #车辆加速控制使能
+  StartBit: 0
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisDriverModeCtrl: #驱动模式控制
+  StartBit: 2
+  Length: 2
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisGearCtrl: #档位控制
+  StartBit: 4
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisSpeedCtrl: #车辆速度控制
+  StartBit: 8
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.01
+  Offset: 0
+ ACU_DriveLifeSig: #循环计数0~15
+  StartBit: 48
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_CheckSum_130: #校验sum=byte0 xor byte1 xor...byte6
+  StartBit: 56
+  Length: 8
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+
+0X131:
+ ACU_ChassisBrakeEn: #车辆刹车控制使能
+  StartBit: 0
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisBrakePdlTarget: #车辆刹车控制
+  StartBit: 8
+  Length: 10
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 0.1
+  Offset: 0
+ ACU_BrakeLifeSig: #循环计数0~15
+  StartBit: 48
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+
+ ACU_CheckSum_131: #校验sum=byte0 xor byte1 xor...byte6
+  StartBit: 56
+  Length: 8
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+
+
+0X132:
+ ACU_ChassisSteerEnCtrl: #车辆转向控制使能
+  StartBit: 0
+  Length: 1
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisSteerModeCtrl: #转向模式控制
+  StartBit: 4
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_ChassisSteerAngleTarget: #车辆转向控制（前）
+  StartBit: 8
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Signed
+  Factor: 1
+  Offset: 0
+ ACU_SteerLifeSig: #循环计数0~15
+  StartBit: 48
+  Length: 4
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ ACU_CheckSum_132: #校验sum=byte0 xor byte1 xor...byte6
+  StartBit: 56
+  Length: 8
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0

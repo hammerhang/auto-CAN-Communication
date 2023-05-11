@@ -1,0 +1,35 @@
+#ACAN解析报文配置文件
+
+0X530:
+ VCU_ChassisGearFb: #档位状态反馈
+  StartBit: 4
+  Length: 2
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
+ VCU_ChassisSpeedFb: #车速实际反馈
+  StartBit: 8
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Signed
+  Factor: 0.01
+  Offset: 0
+
+0X532:
+ VCU_ChassisSteerAngleFb: #前轮转向反馈
+  StartBit: 8
+  Length: 16
+  ByteOrder: Intel
+  ValueType: Signed
+  Factor: 1
+  Offset: 0
+
+0X534:
+ VCU_DrivingModeFb: #驾驶模式反馈
+  StartBit: 0
+  Length: 2
+  ByteOrder: Intel
+  ValueType: Unsigned
+  Factor: 1
+  Offset: 0
