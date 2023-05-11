@@ -39,3 +39,4 @@ Transfer the folder to your own project and connect to the library
 
 # 4. manual
 In auto-CAN-Communication/doc/manual.md, you can see the architecture of the system
+![Architecture](https://github.com/hammerhang/auto-CAN-Communication/blob/main/doc/pictrue/Architecture.png)
